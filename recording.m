@@ -13,5 +13,5 @@ xin = getaudiodata(myrecObj);% save the recorded signal to variable xin
 play(myrecObj); % play the recorded audio signal object
 audiowrite('test.wav',xin,Fs); % create a .wav file to save the recorded signal xin.
 [y, Fs]=audioread('test.wav'); % read a .wav audio file and save to variable y.
-Sound(y,Fs); % play the signal y with correct Fs (sampling rate)
+sound(y,Fs); % play the signal y with correct Fs (sampling rate)
 end
