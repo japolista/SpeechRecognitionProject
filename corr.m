@@ -6,7 +6,7 @@ myrecObj = audiorecorder(44100,16,1); % Fs=44.1k Hz, 16bit, mono channel
 disp('Start speaking.') % display a message ‘Start speaking’ in the command window
 recordblocking(myrecObj, 2); % record for 2 seconds
 disp('End of Recording.');
-xin = getaudiodata(myrecObj);
+xin = trimWord(getaudiodata(myrecObj));
 cfrknorm = audioread('cfrknorm.wav');
 bucknorm = audioread('bucknorm.wav');
 jjknorm = audioread('jjknorm.wav');

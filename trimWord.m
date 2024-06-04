@@ -2,8 +2,8 @@ function [y, Fs] = trimWord(filename)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 [y, Fs]=audioread(filename);
-subplot(2,1,1)
-plot(y)
+%subplot(2,1,1)
+%plot(y)
 pad = 0.1*Fs;
 thrshld = median(abs(y(abs(y)>0.3)))
 %head trim
@@ -20,6 +20,6 @@ for i = length(y):-1:1
         break;
     end
 end
-subplot(2,1,2)
-plot(y)
+%subplot(2,1,2)
+%plot(y)
 end
