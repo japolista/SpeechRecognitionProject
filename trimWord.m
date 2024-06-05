@@ -5,7 +5,7 @@ function [y, Fs] = trimWord(filename)
 %subplot(2,1,1)
 %plot(y)
 pad = 0.1*Fs;
-thrshld = median(abs(y(abs(y)>0.3)))
+thrshld = median(abs(y(abs(y)>0.4)));
 %head trim
 for i = 1:length(y)
     if abs(y(i)) > thrshld
