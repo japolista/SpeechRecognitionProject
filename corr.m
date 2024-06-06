@@ -7,17 +7,30 @@ disp('Start speaking.') % display a message ‘Start speaking’ in the command 
 recordblocking(myrecObj, 2); % record for 2 seconds
 disp('End of Recording.');
 xin = getaudiodata(myrecObj);
+
 cfrknorm = audioread('.\normalizedWords\cfrknorm.wav');
 bucknorm = audioread('.\normalizedWords\bucknorm.wav');
 jjknorm = audioread('.\normalizedWords\jjknorm.wav');
 sjknorm = audioread('.\normalizedWords\sjknorm.wav');
 ucknorm = audioread('.\normalizedWords\ucknorm.wav');
 
-n(:, 1) = xcorr(xin, bucknorm);
-n(:, 2) = xcorr(xin, cfrknorm);
-n(:, 3) = xcorr(xin, jjknorm);
-n(:, 4)= xcorr(xin, sjknorm);
-n(:, 5) = xcorr(xin, ucknorm);
+cfrsnorm = audioread('.\words\cfrsnorm.wav');
+bucsnorm = audioread('.\words\bucsnorm.wav');
+jjsnorm = audioread('.\words\jjsnorm.wav');
+sjsnorm = audioread('.\words\sjsnorm.wav');
+ucsnorm = audioread('.\words\ucsnorm.wav');
+
+cfr = (cfrknorm + cfrsnorm);
+buc = (bucknorm + bucsnorm);
+jj = (jjknorm + jjsnorm);
+sj = (sjsnorm + sjknorm);
+uc = (ucknorm + ucsnorm);
+
+n(:, 1) = xcorr(xin, buc);
+n(:, 2) = xcorr(xin, cfr);
+n(:, 3) = xcorr(xin, jj);
+n(:, 4)= xcorr(xin, sj);
+n(:, 5) = xcorr(xin, uc);
 
 maxVector = [ max(n(:,1)), max(n(:,2)), max(n(:,3)), max(n(:,4)), max(n(:,5))];
 wordVector = ["Bacon Ultimate Cheeseburger", "Curly Fries", "Jumbo Jack Burger", "Sourdough Jack", "Ultimate Cheeseburger"];
