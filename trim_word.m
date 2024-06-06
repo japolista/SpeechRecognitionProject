@@ -1,11 +1,11 @@
-function [y, Fs] = trimWord(filename)
+function [y, Fs] = trim_word(filename)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 [y, Fs]=audioread(filename);
 %subplot(2,1,1)
 %plot(y)
 pad = 0.1*Fs;
-thrshld = median(abs(y(abs(y)>0.4)));
+thrshld = median(abs(y(abs(y)>0.3)))
 %head trim
 for i = 1:length(y)
     if abs(y(i)) > thrshld
