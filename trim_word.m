@@ -1,3 +1,4 @@
+%Satya, Karen, Jeremiah
 function [y, Fs] = trim_word(filename)
 %%%%%%deprecated%%%%%%
 %[y, Fs] = trim_word(filename)

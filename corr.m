@@ -1,6 +1,11 @@
-function n = corr()
-%n = corr()
-%   Detailed explanation goes here
+%Satya, Karen, Jeremiah
+function [word, r] = corr()
+%[word, similarity] = corr()
+%Prompt the user to speak a word.
+%Try to detect the word spoken from a small list of words.
+%word = detected word
+%r = the r value of the detected word cross correlated with the input
+
 Fs = 44100;
 myrecObj = audiorecorder(44100,16,1); % Fs=44.1k Hz, 16bit, mono channel
 disp('Start speaking.') % display a message ‘Start speaking’ in the command window
@@ -43,4 +48,5 @@ wordVector = ["Bacon Ultimate Cheeseburger", "Curly Fries", "Jumbo Jack Burger",
 %Value of maximum in v and index of same in i
 [v, i] = max(maxVector);
 %output = wordVector at i
-n = wordVector(i);
+word = wordVector(i);
+r = v;

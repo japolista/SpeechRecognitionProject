@@ -1,3 +1,4 @@
+%Satya, Karen, Jeremiah
 function xin = recording(filename)
 %   XIN = RECORDING
 %   Output: Vector xin

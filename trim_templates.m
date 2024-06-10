@@ -1,3 +1,4 @@
+%Satya, Karen, Jeremiah
 %%%%%%deprecated%%%%%%
 %script to trim all base words
 folder = dir(fullfile('.\normalizedWords','*.wav'));
