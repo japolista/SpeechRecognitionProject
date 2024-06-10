@@ -1,6 +1,8 @@
 function [y, Fs] = trim_word(filename)
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+%%%%%%deprecated%%%%%%
+%[y, Fs] = trim_word(filename)
+%Read the selected word and trim the ends to close around a tenth
+%of a second of where the word(s) start and end
 [y, Fs]=audioread(filename);
 %subplot(2,1,1)
 %plot(y)
