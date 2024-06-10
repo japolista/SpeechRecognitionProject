@@ -1,2 +1,2 @@
 # SpeechRecognitionProject
-#Contributors: Satya Fawcett, Karen, Jeremiah Apolista
+#Contributors: Satya Fawcett, Karen Silverio, Jeremiah Apolista
